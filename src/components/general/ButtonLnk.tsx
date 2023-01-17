@@ -15,7 +15,7 @@ const ButtonLink = ({ children, className, href, onClick }: ButtonLnkProps) => {
     <Link
       onClick={onClick}
       className={clsx(
-        " rounded  bg-orange-600 p-4 text-xl text-white",
+        " w-fit  rounded bg-orange-600 p-4 text-center text-xl text-white",
         className
       )}
       href={href as Url}

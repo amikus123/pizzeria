@@ -35,7 +35,7 @@ const Header = () => {
         })}
       </ul>
       <div className="flex align-middle md:hidden">
-        <button>{<FaBars className="h-10 w-10" />}</button>
+        <button>{<FaBars className="h-10 w-10" color="white" />}</button>
       </div>
 
       <div className="hidden align-middle md:flex ">
