@@ -25,7 +25,12 @@ const OpeningHoursDropdown = () => {
           <span className=" ">Today:</span>{" "}
           <span>{daysOfWeek[dayNumberInArray]?.text}</span>
         </div>
-        <ul className={clsx([open ? "flex" : "hidden", "flex-col gap-1 "])}>
+        <ul
+          className={clsx([
+            open ? "max-h-52" : "max-h-0",
+            "flex flex-col gap-1 overflow-hidden transition-[max-height] duration-500 ",
+          ])}
+        >
           {daysOfWeek.map((item, index) => {
             return (
               <li key={index} className="flex justify-between gap-0">
@@ -36,7 +41,7 @@ const OpeningHoursDropdown = () => {
         </ul>
       </div>
       <div
-        className=" flex h-6  items-center justify-center  pl-4"
+        className=" flex h-6  cursor-pointer items-center  justify-center pl-4"
         onClick={() => {
           setOpen(!open);
         }}

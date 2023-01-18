@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaBars, FaPizzaSlice } from "react-icons/fa";
-import ButtonLnk from "../general/ButtonLnk";
+import ButtonLnk from "../general/ButtonLink";
+import Hover from "../general/Hover";
 
 interface LinkData {
   text: string;
@@ -29,7 +30,9 @@ const Header = () => {
         {links.map(({ href, text }, index) => {
           return (
             <li key={index} className="text-lg text-white">
-              <Link href={href}>{text}</Link>
+              <Hover tag="nextLink" href={href}>
+                {text}
+              </Hover>
             </li>
           );
         })}

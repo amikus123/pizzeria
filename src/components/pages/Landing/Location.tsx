@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React from "react";
-import ButtonLink from "../../general/ButtonLnk";
+import ButtonLink from "../../general/ButtonLink";
 import Heading from "../../general/Heading";
 import Hover from "../../general/Hover";
 import OpeningHoursDropdown from "../../general/OpeningHoursDropdown/OpeningHoursDropdown";
@@ -31,6 +31,7 @@ const LocationElement = ({
 };
 
 const Location = () => {
+  // TODO add big icons for desktop
   return (
     <section className="flex pt-12">
       <ul className="flex flex-wrap justify-around gap-4   xl:mx-auto">
@@ -43,8 +44,12 @@ const Location = () => {
         </LocationElement>
         <LocationElement text="CALL US">
           <div className="flex flex-col gap-1">
-            <Hover href="tel:1">123123123</Hover>
-            <Hover href="tel:1">345345345</Hover>
+            <Hover href="tel:1" tag="a">
+              123123123
+            </Hover>
+            <Hover href="tel:1" tag="a">
+              345345345
+            </Hover>
           </div>
         </LocationElement>
         <LocationElement text="OPEN HOURS" className="xl:mr-8">
