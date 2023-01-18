@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="absolute z-10 flex w-full items-center justify-between px-4 py-8 ">
+    <header className="absolute z-10 flex w-full items-center justify-between px-4 py-8 lg:justify-around ">
       <div>
         <Link href="/">
           <FaPizzaSlice className="h-16 w-16" color="white" />
