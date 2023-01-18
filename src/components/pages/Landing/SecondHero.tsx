@@ -1,20 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import ButtonLink from "../../general/ButtonLink";
+import ButtonLink from "../../general/text/ButtonLink";
+import StylizedHeading from "../../general/text/StylizedHeading";
 
 const SecondHero = () => {
   return (
     <section className="mt-20 flex flex-col  gap-8 xl:flex-row xl:items-center">
       <div className="z-10 ml-4 max-w-2xl bg-white xl:ml-0 xl:translate-x-56 ">
-        <h3 className="flex flex-col">
-          <span className="pb-2 font-serif text-2xl text-orange-500 sm:text-3xl md:text-4xl">
-            Learn more
-          </span>
-          <span className="pb-2 text-3xl font-bold sm:text-5xl  md:max-w-none md:text-6xl">
-            ABOUT OUR RESTAURANT
-          </span>
-          <div className="h-2 w-8 bg-orange-600"></div>
-        </h3>
+        <StylizedHeading tag="h3" upperText="Learn more">
+          ABOUT OUR RESTAURANT
+        </StylizedHeading>
+
         <ul className="text- flex flex-col gap-8 py-8 md:text-xl">
           <li>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat

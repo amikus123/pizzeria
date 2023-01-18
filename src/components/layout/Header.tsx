@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaBars, FaPizzaSlice } from "react-icons/fa";
-import ButtonLnk from "../general/ButtonLink";
-import Hover from "../general/Hover";
+import ButtonLnk from "../general/text/ButtonLink";
+import Hover from "../general/text/Hover";
 
 interface LinkData {
   text: string;

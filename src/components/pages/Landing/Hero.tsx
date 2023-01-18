@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLink from "../../general/ButtonLink";
+import ButtonLink from "../../general/text/ButtonLink";
 
 const Hero = () => {
   return (

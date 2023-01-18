@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import BestOffers from "./BestOffers";
 import Cover from "./Cover";
 import Hero from "./Hero";
 import Location from "./Location";
@@ -18,6 +19,7 @@ const Landing = () => {
       >
         <Location />
         <SecondHero />
+        <BestOffers />
       </div>
     </>
   );

@@ -10,7 +10,12 @@ interface ButtonLnkProps {
   onClick?: () => void;
 }
 
-const ButtonLink = ({ children, className, href, onClick }: ButtonLnkProps) => {
+const ButtonLink = ({
+  children,
+  className = "",
+  href,
+  onClick,
+}: ButtonLnkProps) => {
   return (
     <Link
       onClick={onClick}

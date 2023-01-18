@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React from "react";
-import ButtonLink from "../../general/ButtonLink";
-import Heading from "../../general/Heading";
-import Hover from "../../general/Hover";
+import ButtonLink from "../../general/text/ButtonLink";
+import Heading from "../../general/text/Heading";
+import Hover from "../../general/text/Hover";
 import OpeningHoursDropdown from "../../general/OpeningHoursDropdown/OpeningHoursDropdown";
 
 interface LocationElementProps {
