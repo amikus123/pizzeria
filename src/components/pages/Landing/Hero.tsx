@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLink from "../../general/text/ButtonLink";
+import Button from "../../general/text/Button";
 
 const Hero = () => {
   return (
@@ -17,9 +17,9 @@ const Hero = () => {
         <p className="py-4 text-lg sm:text-xl md:text-xl">
           Our recipies are a of great quality, traditional pizza in modern form.
         </p>
-        <ButtonLink className="" href="menu">
+        <Button className="" href="menu">
           VIEW MENU
-        </ButtonLink>
+        </Button>
       </div>
     </section>
   );

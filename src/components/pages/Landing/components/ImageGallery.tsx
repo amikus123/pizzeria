@@ -7,13 +7,14 @@ import {
   imageGalleryAtom,
   imageGalleryIndexAtom,
 } from "../../../../atoms/galleryImages";
+import Button from "../../../general/text/Button";
 const ImageGallery = () => {
   const imageGallery = useRecoilValue(imageGalleryAtom);
   const setImageGalleryIndex = useSetRecoilState(imageGalleryIndexAtom);
 
   return (
     <div>
-      <ul className="mt-4 flex flex-wrap xl:mt-20">
+      <ul className=" mt-20 flex flex-wrap">
         {imageGallery.map(({ alt, src }, index) => {
           return (
             <li
@@ -39,6 +40,15 @@ const ImageGallery = () => {
           );
         })}
       </ul>
+
+      <Button
+        className="mx-auto my-8"
+        onClick={() => {
+          setImageGalleryIndex(0);
+        }}
+      >
+        SEE ALL
+      </Button>
     </div>
   );
 };

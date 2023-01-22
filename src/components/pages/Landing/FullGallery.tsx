@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { RiCloseFill } from "react-icons/ri";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {

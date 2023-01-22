@@ -22,5 +22,5 @@ export const imageGalleryAtom = atom<Image[]>({
 
 export const imageGalleryIndexAtom = atom<number>({
   key: "imageGalleryIndex",
-  default: 1,
+  default: -1,
 });

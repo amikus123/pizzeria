@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import React from "react";
-import ButtonLink from "../../general/text/ButtonLink";
 import Heading from "../../general/text/Heading";
 import Hover from "../../general/text/Hover";
 import OpeningHoursDropdown from "../../general/OpeningHoursDropdown/OpeningHoursDropdown";
 import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
+import Button from "../../general/text/Button";
 interface LocationElementProps {
   children: React.ReactNode;
   text: string;
@@ -57,7 +57,7 @@ const Location = () => {
         <LocationElement icon="geo" text="OUR ADRESS">
           <ul className="flex flex-col gap-1">
             <li>PIZZA RESTAURANT</li>
-            <li>Rome street</li>
+            <li>Kazimierza 15</li>
             <li>13-334 Rzeszów</li>
           </ul>
         </LocationElement>
@@ -75,7 +75,7 @@ const Location = () => {
           <OpeningHoursDropdown />
         </LocationElement>
         <LocationElement text="ORDER ONLINE" className="xl:w-32">
-          <ButtonLink href="menu">VIEW MENU</ButtonLink>
+          <Button href="menu">VIEW MENU</Button>
         </LocationElement>
       </ul>
     </section>

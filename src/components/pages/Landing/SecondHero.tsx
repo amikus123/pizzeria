@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ButtonLink from "../../general/text/ButtonLink";
+import Button from "../../general/text/Button";
 import StylizedHeading from "../../general/text/StylizedHeading";
 
 const SecondHero = () => {
@@ -29,9 +29,9 @@ const SecondHero = () => {
             nulla pariatur velit doloremque saepe.
           </li>
         </ul>
-        <ButtonLink className="md:text-xl" href="/menu">
+        <Button className="md:text-xl" href="/menu">
           CHECK OUR MENU
-        </ButtonLink>
+        </Button>
       </div>
       <div className="relative flex h-[384px] md:h-[786px] xl:flex-1 ">
         <Image

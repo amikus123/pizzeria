@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaBars, FaPizzaSlice } from "react-icons/fa";
-import ButtonLnk from "../general/text/ButtonLink";
+import Button from "../general/text/Button";
 import Hover from "../general/text/Hover";
 
 interface LinkData {
@@ -20,11 +19,9 @@ const Header = () => {
 
   return (
     <header className="absolute z-10 flex w-full items-center justify-between px-4 py-8 lg:justify-around ">
-      <div>
-        <Link href="/">
-          <FaPizzaSlice className="h-16 w-16" color="white" />
-        </Link>
-      </div>
+      <Link href="/">
+        <FaPizzaSlice className="h-16 w-16" color="white" />
+      </Link>
 
       <ul className="hidden  list-none gap-8 md:flex">
         {links.map(({ href, text }, index) => {
@@ -42,7 +39,7 @@ const Header = () => {
       </div>
 
       <div className="hidden align-middle md:flex ">
-        <ButtonLnk href="/order">Order now</ButtonLnk>
+        <Button href="/order">Order now</Button>
       </div>
     </header>
   );
