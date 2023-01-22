@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import BestOffers from "./BestOffers";
 import Cover from "./Cover";
+import Gallery from "./Gallery";
 import Hero from "./Hero";
 import Location from "./Location";
 import SecondHero from "./SecondHero";
@@ -20,6 +21,7 @@ const Landing = () => {
         <Location />
         <SecondHero />
         <BestOffers />
+        <Gallery />
       </div>
     </>
   );
