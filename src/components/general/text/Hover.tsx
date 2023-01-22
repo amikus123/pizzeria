@@ -4,6 +4,7 @@ import Link from "next/link";
 interface HoverProps extends React.ButtonHTMLAttributes<HTMLAnchorElement> {
   tag?: "a" | "span" | "p" | "nextLink";
   href?: string;
+  colorChange?: boolean;
 }
 
 const Hover = ({
@@ -11,6 +12,7 @@ const Hover = ({
   className,
   href,
   tag = "span",
+  colorChange,
   ...rest
 }: HoverProps) => {
   const Tag = tag as "a";
@@ -21,8 +23,9 @@ const Hover = ({
         <Link
           {...rest}
           className={clsx([
+            "cursor-pointer transition duration-300  hover:underline ",
+            colorChange && "hover:text-orange-600",
             className,
-            "cursor-pointer transition duration-300 hover:text-orange-600 hover:underline ",
           ])}
           href={href as ""}
         >
@@ -31,8 +34,9 @@ const Hover = ({
       ) : (
         <Tag
           className={clsx([
+            "cursor-pointer transition duration-300  hover:underline ",
+            colorChange && "hover:text-orange-600",
             className,
-            "cursor-pointer transition duration-300 hover:text-orange-600 hover:underline ",
           ])}
           href={href as ""}
           {...rest}
