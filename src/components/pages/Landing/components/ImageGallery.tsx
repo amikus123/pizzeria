@@ -2,11 +2,19 @@ import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 import { FaImage } from "react-icons/fa";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  imageGalleryAtom,
+  imageGalleryIndexAtom,
+} from "../../../../atoms/galleryImages";
 const ImageGallery = () => {
+  const imageGallery = useRecoilValue(imageGalleryAtom);
+  const setImageGalleryIndex = useSetRecoilState(imageGalleryIndexAtom);
+
   return (
     <div>
-      <ul className="mt-4 flex flex-wrap">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+      <ul className="mt-4 flex flex-wrap xl:mt-20">
+        {imageGallery.map(({ alt, src }, index) => {
           return (
             <li
               key={index}
@@ -15,13 +23,11 @@ const ImageGallery = () => {
                 index > 5 && index <= 7 && "hidden lg:flex",
                 index > 7 && "hidden xl:flex",
               ])}
+              onClick={() => {
+                setImageGalleryIndex(index);
+              }}
             >
-              <Image
-                src={index / 2 === 0 ? "/chef.jpg" : "/couple.jpg"}
-                fill
-                className="object-fill"
-                alt="img"
-              />
+              <Image src={src} fill className="object-fill" alt={alt} />
               <div className="group absolute top-0 bottom-0 left-0   right-0 flex cursor-pointer items-center justify-center   ">
                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-orange-600 opacity-0 transition duration-300 hover:opacity-40 "></div>
                 <FaImage

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import BestOffers from "./BestOffers";
 import Cover from "./Cover";
+import FullGallery from "./FullGallery";
 import Gallery from "./Gallery";
 import Hero from "./Hero";
 import Location from "./Location";
@@ -23,6 +24,7 @@ const Landing = () => {
         <BestOffers />
         <Gallery />
       </div>
+      <FullGallery />
     </>
   );
 };

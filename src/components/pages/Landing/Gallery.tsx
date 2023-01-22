@@ -5,7 +5,7 @@ import ImageGallery from "./components/ImageGallery";
 const Gallery = () => {
   return (
     <section>
-      <StylizedHeading tag="h3" upperText="See our">
+      <StylizedHeading tag="h3" upperText="See our" className="items-center ">
         DISHES AND RESTAURANTS
       </StylizedHeading>
 
