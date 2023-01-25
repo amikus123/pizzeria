@@ -1,7 +1,6 @@
 import React from "react";
 import BestOffers from "./sections/BestOffers";
-import Cover from "./components/Cover";
-import FullGallery from "../../layout/FullGallery";
+import Cover from "../../layout/Cover";
 import Gallery from "./sections/Gallery";
 import Hero from "./sections/Hero";
 import Location from "./sections/Location";
@@ -12,7 +11,7 @@ const Landing = () => {
     <>
       <div>
         <Hero />
-        <Cover />
+        <Cover url="/pizza-bg.jpg" alt="Pizza" isLanding />
       </div>
       <div
         className="flex flex-col 
@@ -23,7 +22,6 @@ const Landing = () => {
         <BestOffers />
         <Gallery />
       </div>
-      <FullGallery />
     </>
   );
 };

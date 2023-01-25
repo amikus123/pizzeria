@@ -23,7 +23,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] =
     useRecoilState(isMobileMenuOpenAtom);
   return (
-    <header className="absolute z-10 flex w-full items-center justify-between px-4 py-8 lg:justify-around ">
+    <header className="absolute z-10 flex w-full items-center justify-between px-4  py-4 md:py-8 lg:justify-around ">
       <Link href="/">
         <FaPizzaSlice className="h-16 w-16" color="white" />
       </Link>
@@ -46,9 +46,11 @@ const Header = () => {
           }}
         >
           {isMobileMenuOpen ? (
-            <RiCloseFill className="h-10 w-10" color="white" />
+            <>
+              {/* <RiCloseFill className=" h-6 w-6 sm:h-10 sm:w-10" color="white" /> */}
+            </>
           ) : (
-            <FaBars className="h-10 w-10" color="white" />
+            <FaBars className="h-6 w-6 sm:h-10 sm:w-10" color="white" />
           )}
         </button>
       </div>
