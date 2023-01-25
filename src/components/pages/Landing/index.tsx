@@ -1,12 +1,11 @@
-import Image from "next/image";
 import React from "react";
-import BestOffers from "./BestOffers";
-import Cover from "./Cover";
-import FullGallery from "./FullGallery";
-import Gallery from "./Gallery";
-import Hero from "./Hero";
-import Location from "./Location";
-import SecondHero from "./SecondHero";
+import BestOffers from "./sections/BestOffers";
+import Cover from "./components/Cover";
+import FullGallery from "../../layout/FullGallery";
+import Gallery from "./sections/Gallery";
+import Hero from "./sections/Hero";
+import Location from "./sections/Location";
+import SecondHero from "./sections/SecondHero";
 
 const Landing = () => {
   return (

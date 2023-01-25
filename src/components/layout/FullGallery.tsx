@@ -5,7 +5,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import {
   imageGalleryAtom,
   imageGalleryIndexAtom,
-} from "../../../atoms/galleryImages";
+} from "../../atoms/galleryImages";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import Image from "next/image";
 
@@ -61,13 +61,13 @@ const FullGallery = () => {
           }}
         >
           <FaAngleLeft
-            className="mx-8 h-8 w-8 cursor-pointer"
+            className="h-8 w-8 cursor-pointer md:mx-8"
             color="white"
             onClick={() => {
               modifyIndex(false);
             }}
           />
-          <div className="relative  flex aspect-video min-h-[200px] flex-1">
+          <div className="relative  mx-auto flex aspect-video min-w-[200px]  flex-1 lg:max-w-[150vh]">
             {imageGalleryIndex >= 0 && (
               <Image
                 src={imageGallery[imageGalleryIndex]?.src as string}
@@ -78,7 +78,7 @@ const FullGallery = () => {
             )}
           </div>
           <FaAngleRight
-            className="mx-8 h-8 w-8 cursor-pointer"
+            className=" h-8 w-8 cursor-pointer md:mx-8"
             color="white"
             onClick={() => {
               modifyIndex(true);

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Button from "../../general/text/Button";
-import StylizedHeading from "../../general/text/StylizedHeading";
+import Button from "../../../general/text/Button";
+import StylizedHeading from "../../../general/text/StylizedHeading";
 
 const SecondHero = () => {
   return (

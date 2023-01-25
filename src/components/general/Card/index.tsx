@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Button from "../../../general/text/Button";
-import Heading from "../../../general/text/Heading";
-import type { OfferCardData } from "../BestOffers";
+import Button from "../text/Button";
+import Heading from "../text/Heading";
+import type { OfferCardData } from "../../pages/Landing/sections/BestOffers";
 
 const Card = ({ imageAlt, title, imageUrl, text }: OfferCardData) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import Hover from "../../general/text/Hover";
-import StylizedHeading from "../../general/text/StylizedHeading";
-import Card from "./components/Card";
+import Hover from "../../../general/text/Hover";
+import StylizedHeading from "../../../general/text/StylizedHeading";
+import Card from "../../../general/Card";
 
 export interface OfferCardData {
   title: string;

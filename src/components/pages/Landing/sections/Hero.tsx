@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../general/text/Button";
+import Button from "../../../general/text/Button";
 
 const Hero = () => {
   return (

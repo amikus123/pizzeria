@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import React from "react";
-import Heading from "../../general/text/Heading";
-import Hover from "../../general/text/Hover";
-import OpeningHoursDropdown from "../../general/OpeningHoursDropdown/OpeningHoursDropdown";
+import Heading from "../../../general/text/Heading";
+import Hover from "../../../general/text/Hover";
+import OpeningHoursDropdown from "../../../general/OpeningHoursDropdown";
 import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
-import Button from "../../general/text/Button";
+import Button from "../../../general/text/Button";
 interface LocationElementProps {
   children: React.ReactNode;
   text: string;
@@ -36,7 +36,7 @@ const LocationElement = ({
       {Tag && (
         <Tag
           color=""
-          className="mr-4 hidden h-16 w-16 fill-orange-600 xl:flex"
+          className="mr-8 hidden h-16 w-16 fill-orange-600 xl:flex"
         />
       )}
       <div className="flex flex-col">
@@ -75,7 +75,7 @@ const Location = () => {
           <OpeningHoursDropdown />
         </LocationElement>
         <LocationElement text="ORDER ONLINE" className="xl:w-32">
-          <Button href="menu">VIEW MENU</Button>
+          <Button href="menu">VIEW&nbsp;MENU</Button>
         </LocationElement>
       </ul>
     </section>

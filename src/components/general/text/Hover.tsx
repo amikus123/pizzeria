@@ -12,7 +12,7 @@ const Hover = ({
   className,
   href,
   tag = "span",
-  colorChange,
+  colorChange = true,
   ...rest
 }: HoverProps) => {
   const Tag = tag as "a";
