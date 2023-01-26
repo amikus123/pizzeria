@@ -1,0 +1,9 @@
+{
+  "locales": ["pl", "en"],
+  "defaultLocale": "pl",
+  "pages": {
+    "*": ["common", "landing"],
+    "/": ["home", "example"],
+    "/about": ["about"]
+  }
+}

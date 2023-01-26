@@ -6,7 +6,6 @@ import { api } from "../utils/api";
 
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
-import { appWithTranslation } from "next-i18next";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -21,4 +20,4 @@ const MyApp: AppType<{ session: Session | null }> = ({
   );
 };
 
-export default api.withTRPC(appWithTranslation(MyApp));
+export default api.withTRPC(MyApp);

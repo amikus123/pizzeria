@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../../../general/text/Button";
-import { useTranslation } from "next-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const Hero = () => {
-  const { t } = useTranslation(["landing"]);
+  const { t, lang } = useTranslation(["common"]);
 
   return (
     <section className="pointer-events-none absolute  z-10 w-full px-4 pt-56  text-white  ">

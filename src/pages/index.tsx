@@ -9,8 +9,6 @@ import BestOffers from "../components/pages/Landing/sections/LandingBestOffers";
 import Hero from "../components/pages/Landing/sections/LandingHero";
 import SecondHero from "../components/pages/Landing/sections/LandingSecondHero";
 import Location from "../components/pages/Landing/sections/LandingLocation";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
   return (
@@ -30,12 +28,6 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-export const getServerSideProps = async ({ locale }: { locale: string }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "landing"])),
-  },
-});
 
 // const AuthShowcase: React.FC = () => {
 //   const { data: sessionData } = useSession();
