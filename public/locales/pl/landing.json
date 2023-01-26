@@ -1,15 +1,9 @@
 {
-  "title": "AAAA to react using react-i18next",
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
-  },
-
   "sections": {
     "hero": {
-      "headingText": "BEST PIZZA IN TOWN",
-      "headingSubText": "Only here you will eat",
-      "text": "Our cuisine is fresh, health and tasty, prepared and served with utmost care and diligence by our specialized staff. We make sure that our customers are always satisfied."
+      "headingText": "THE BEST ITALIAN PIZZA",
+      "headingSubText": "Get ready for ...",
+      "text": "Our recipies are a of great quality, traditional pizza in modern form."
     },
     "aboutRestaurant": {
       "headingText": "ABOUT OUR RESTAURANT",

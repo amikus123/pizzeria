@@ -11,9 +11,6 @@ import i18n from "./next-i18next.config.js";
 const config = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    defaultLocale: "pl",
-    locales: ["en", "pl"],
-  },
+  i18n: i18n.i18n,
 };
 export default config;

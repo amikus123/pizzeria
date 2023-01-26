@@ -13,15 +13,12 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
-  const { t, i18n } = useTranslation("landing");
-  console.log({ t, i18n });
   return (
     <>
       <div>
         <Hero />
         <Cover url="/pizza-bg.jpg" alt="Pizza" isLanding />
       </div>
-      {t("title")}
       <div className="flex flex-col">
         <Location />
         <SecondHero />
