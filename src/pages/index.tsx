@@ -2,16 +2,43 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
-
 import { api } from "../utils/api";
-import Landing from "../components/pages/Landing";
+import Cover from "../components/layout/Cover";
+import Gallery from "../components/pages/Landing/sections/LandingGallery";
+import BestOffers from "../components/pages/Landing/sections/LandingBestOffers";
+import Hero from "../components/pages/Landing/sections/LandingHero";
+import SecondHero from "../components/pages/Landing/sections/LandingSecondHero";
+import Location from "../components/pages/Landing/sections/LandingLocation";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
-  return <Landing />;
+  const { t, i18n } = useTranslation("landing");
+  console.log({ t, i18n });
+  return (
+    <>
+      <div>
+        <Hero />
+        <Cover url="/pizza-bg.jpg" alt="Pizza" isLanding />
+      </div>
+      {t("title")}
+      <div className="flex flex-col">
+        <Location />
+        <SecondHero />
+        <BestOffers />
+        <Gallery />
+      </div>
+    </>
+  );
 };
 
 export default Home;
+
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common", "landing"])),
+  },
+});
 
 // const AuthShowcase: React.FC = () => {
 //   const { data: sessionData } = useSession();

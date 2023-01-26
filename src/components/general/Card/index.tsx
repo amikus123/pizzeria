@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Button from "../text/Button";
 import Heading from "../text/Heading";
-import type { OfferCardData } from "../../pages/Landing/sections/BestOffers";
+import type { OfferCardData } from "../../pages/Landing/sections/LandingBestOffers";
 
 const Card = ({ imageAlt, title, imageUrl, text }: OfferCardData) => {
   return (

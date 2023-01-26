@@ -1,6 +1,6 @@
 import React from "react";
 import StylizedHeading from "../../../general/text/StylizedHeading";
-import ImageGallery from "../components/ImageGallery";
+import ImageGallery from "../components/LandingImageGallery";
 
 const Gallery = () => {
   return (

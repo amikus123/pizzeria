@@ -1,0 +1,81 @@
+{
+  "menu": "menu",
+  "gallery": "gallery",
+  "offers": "offers",
+  "delivery": "delivery",
+  "contactUs": "contact us",
+  "aboutUs`": "about us",
+  "buttons": {
+    "orderNow": "order now",
+    "viewMenu": "view menu",
+    "seeMore": "see more",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "address": {
+    "firstLine": "PIT STOP Pizza",
+    "secondLine": "Leska 6",
+    "thirdLine": "35-505 Rzeszów",
+    "short": "Leska 6, 35-505 Rzeszów"
+  },
+  "callUs": "call us",
+  "ourAddress": "our-address",
+  "openingHours": "opneing hours",
+  "learnMore": "learn more",
+  "orderOnline": "order online",
+
+  "showAllOffers": "show all offers",
+
+  "headings": {
+    "checkOur": "check our",
+    "bestOffers": "best offers",
+    "onlyHere": "Only here you will eat"
+  },
+  "days": {
+    "today": "today",
+    "monday": "monday",
+    "tuesday": "tuesday",
+    "wednesday": "wednesday",
+    "thursday": "thursday",
+    "friday": "friday",
+    "saturday": "saturday",
+    "sunday": "sunday"
+  },
+
+  "form": {
+    "street": "street",
+    "city": "city",
+    "house": "House No. / name",
+    "reservationData": "Reservation date",
+    "peopleCount": "Num people",
+    "fullName": "full name",
+    "notes": "notes"
+  },
+  "phone": "phone",
+  "socials": "socials",
+  "check": "check",
+  "email": "e-mail",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": ""
+}

@@ -1,0 +1,42 @@
+{
+  "title": "AAAA to react using react-i18next",
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  },
+
+  "sections": {
+    "hero": {
+      "headingText": "BEST PIZZA IN TOWN",
+      "headingSubText": "Only here you will eat",
+      "text": "Our cuisine is fresh, health and tasty, prepared and served with utmost care and diligence by our specialized staff. We make sure that our customers are always satisfied."
+    },
+    "aboutRestaurant": {
+      "headingText": "ABOUT OUR RESTAURANT",
+      "headingSubText": "Learn more",
+      "text": "We invite you to the PIT STOP PIZZA pizzeria in Rzeszów. Our specialty is, of course, PIZZA, which is prepared according to customer requirements from high-quality ingredients.\nThe dough to make it is made by excellent and trusted pizzaiolo. We would like everyone to find something special for themselves. That is why our offer is very varied, first of all, we focus on high quality services and affordable prices, and the priority task is full customer satisfaction.\nOrder processing time is important to us, so we do everything to deliver hot pizza to you quickly."
+    },
+    "bestOffers": {
+      "headingText": "BEST OFFERS",
+      "headingSubText": "Check our",
+      "cards": {
+        "shipping": {
+          "title": "FREE SHIPPING AND PACKAGING",
+          "text": "We do not add additional costs for packaging and delivery to nearby estates (check your address in the delivery tab)"
+        },
+        "loyalty": {
+          "title": "LOYALTY PROGRAM",
+          "text": "Collect 5 stamps, you will get a 10.00 PLN discount! After entering the code, click 'add'. The minimum order value after a discount of PLN 30. The promotion ends: 04/30/2025!"
+        },
+        "sauces": {
+          "title": "PIZZA SAUCES",
+          "text": "For each pizza, 30 cm and 42 cm, we add a set of sauces (garlic and tomato)."
+        }
+      }
+    },
+    "gallery": {
+      "headingText": "DISHES AND RESTAURANT",
+      "headingSubText": "See our"
+    }
+  }
+}

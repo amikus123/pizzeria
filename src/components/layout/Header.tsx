@@ -5,7 +5,6 @@ import { useRecoilState } from "recoil";
 import { isMobileMenuOpenAtom } from "../../atoms/layout";
 import Button from "../general/text/Button";
 import Hover from "../general/text/Hover";
-import { RiCloseFill } from "react-icons/ri";
 
 interface LinkData {
   text: string;
@@ -27,7 +26,6 @@ const Header = () => {
       <Link href="/">
         <FaPizzaSlice className="h-16 w-16" color="white" />
       </Link>
-
       <ul className="hidden  list-none gap-8 md:flex">
         {links.map(({ href, text }, index) => {
           return (

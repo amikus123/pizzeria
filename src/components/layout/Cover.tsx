@@ -20,23 +20,22 @@ const Cover = ({ alt, url, isLanding }: CoverProps) => {
   return (
     <div
       className={clsx([
-        "pointer-events-none  relative w-full brightness-50",
+        "pointer-events-none  relative w-full overflow-hidden brightness-50",
 
         isLanding
           ? "h-[87vw] max-h-[800px] min-h-[600px]"
-          : "h-[60vw] max-h-[550px] min-h-[400px]",
+          : "h-[60vw] max-h-[400px] min-h-[400px] xl:max-h-[450px]",
       ])}
     >
       <Image
         src={url}
         className={clsx([
-          " object-cover",
+          " animate-scale-picture object-cover",
           isMobileMenuOpen && `!w-[calc(100%-${scrollbarWidth}px)]`,
         ])}
         fill
         alt={alt}
       />
-      {isMobileMenuOpen && <div> sasddasas</div>}
     </div>
   );
 };
