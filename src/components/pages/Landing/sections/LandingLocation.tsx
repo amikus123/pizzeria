@@ -5,6 +5,7 @@ import Hover from "../../../general/text/Hover";
 import OpeningHoursDropdown from "../../../general/OpeningHoursDropdown";
 import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
 import Button from "../../../general/text/Button";
+import useTranslation from "next-translate/useTranslation";
 interface LocationElementProps {
   children: React.ReactNode;
   text: string;
@@ -40,7 +41,7 @@ const LocationElement = ({
         />
       )}
       <div className="flex flex-col">
-        <Heading tag="h2" className="pb-2">
+        <Heading tag="h2" className="pb-2 uppercase">
           {text}
         </Heading>
         {children}
@@ -51,17 +52,18 @@ const LocationElement = ({
 
 const Location = () => {
   // TODO add big icons for desktop
+  const { t } = useTranslation("common");
   return (
     <section className="flex pt-20">
       <ul className="flex flex-wrap justify-around gap-4   xl:mx-auto">
-        <LocationElement icon="geo" text="OUR ADRESS">
+        <LocationElement icon="geo" text={t("common:ourAddress")}>
           <ul className="flex flex-col gap-1">
-            <li>PIZZA RESTAURANT</li>
-            <li>Kazimierza 15</li>
-            <li>13-334 Rzeszów</li>
+            <li>{t("common:address.firstLine")}</li>
+            <li>{t("common:address.secondLine")}</li>
+            <li>{t("common:address.thirdLine")}</li>
           </ul>
         </LocationElement>
-        <LocationElement icon="phone" text="CALL US">
+        <LocationElement icon="phone" text={t("common:callUs")}>
           <div className="flex flex-col gap-1">
             <Hover href="tel:1" tag="a">
               123123123
@@ -71,11 +73,17 @@ const Location = () => {
             </Hover>
           </div>
         </LocationElement>
-        <LocationElement icon="clock" text="OPEN HOURS" className="xl:mr-8">
+        <LocationElement
+          icon="clock"
+          text={t("common:openingHours")}
+          className="xl:mr-8"
+        >
           <OpeningHoursDropdown />
         </LocationElement>
         <LocationElement text="ORDER ONLINE" className="xl:w-32">
-          <Button href="menu">VIEW&nbsp;MENU</Button>
+          <Button className="whitespace-nowrap" href="menu">
+            {t("common:buttons.viewMenu")}
+          </Button>
         </LocationElement>
       </ul>
     </section>

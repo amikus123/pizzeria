@@ -2,10 +2,10 @@ import React from "react";
 import Hover from "../../../general/text/Hover";
 import StylizedHeading from "../../../general/text/StylizedHeading";
 import Card from "../../../general/Card";
+import useTranslation from "next-translate/useTranslation";
+import { capitalize } from "lodash";
 
 export interface OfferCardData {
-  title: string;
-  text: string;
   imageUrl: string;
   imageAlt: string;
 }
@@ -13,45 +13,45 @@ export interface OfferCardData {
 const BestOffers = () => {
   const offerCardData: OfferCardData[] = [
     {
-      imageAlt: "Wine",
+      imageAlt: "wine",
       imageUrl: "/wine.jpg",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt praesentium velit autem optio eius quibusdam sed ipsum aliquid similique? Molestias sunt ullam labore provident!",
-      title: "BEST WINES",
     },
     {
-      imageAlt: "Pizza",
+      imageAlt: "pizza",
       imageUrl: "/pizza.jpg",
-      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates doloremque delectus optio tempora architecto assumenda, vero omnis ",
-      title: "OUTSTANDING QUALITY",
     },
     {
-      imageAlt: "Olive oil",
+      imageAlt: "olive-oil",
       imageUrl: "/olive-oil.jpg",
-      text: "illo sapiente deleniti quidem voluptatem quia aliquid accusamus placeat quasi dolorum eveniet consectetur.",
-      title: "PIZZA SAUCES",
     },
   ];
+  const { t } = useTranslation("landing");
+
   return (
     <section
       className="mx-4 flex flex-col items-center justify-center gap-4
     pt-20"
     >
-      <StylizedHeading tag="h3" upperText="Check out" className="items-center">
-        BEST OFFERS
+      <StylizedHeading
+        tag="h3"
+        upperText={t("landing:sections.bestOffers.headingSubText")}
+        className="items-center"
+      >
+        {t("landing:sections.bestOffers.headingText")}
       </StylizedHeading>
       <Hover href="/menu" tag="nextLink">
-        SHOW ALL OFFERS
+        {capitalize(t("common:showAllOffers"))}
       </Hover>
 
       <ul className="my-12 flex flex-wrap justify-center gap-36 pt-20">
-        {offerCardData.map(({ imageAlt, imageUrl, text, title }, index) => {
+        {offerCardData.map(({ imageAlt, imageUrl }, index) => {
           return (
             <li key={index}>
               <Card
-                imageAlt={imageAlt}
+                imageAlt={t(`common:${imageAlt}`)}
                 imageUrl={imageUrl}
-                text={text}
-                title={title}
+                text={t(`common:cards.card${index + 1}.text`)}
+                title={t(`common:cards.card${index + 1}.title`)}
               />
             </li>
           );

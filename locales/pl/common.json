@@ -4,12 +4,13 @@
   "offers": "offers",
   "delivery": "delivery",
   "contactUs": "contact us",
+  "contact": "contact",
   "aboutUs`": "about us",
   "buttons": {
     "orderNow": "order now",
     "viewMenu": "view menu",
     "seeMore": "see more",
-    "": "",
+    "checkOurMenu": "check our menu",
     "": "",
     "": ""
   },
@@ -20,13 +21,13 @@
     "short": "Leska 6, 35-505 Rzeszów"
   },
   "callUs": "call us",
-  "ourAddress": "our-address",
+  "ourAddress": "our address",
   "openingHours": "opneing hours",
   "learnMore": "learn more",
   "orderOnline": "order online",
-
+  "restaurant": "restaurant",
   "showAllOffers": "show all offers",
-
+  "pizza": "pizza",
   "headings": {
     "checkOur": "check our",
     "bestOffers": "best offers",
@@ -42,7 +43,7 @@
     "saturday": "saturday",
     "sunday": "sunday"
   },
-
+  "closed": "closed",
   "form": {
     "street": "street",
     "city": "city",
@@ -57,17 +58,22 @@
   "check": "check",
   "email": "e-mail",
   "team": "team",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
-  "": "",
+  "cards": {
+    "card1": {
+      "title": "FREE SHIPPING AND PACKAGING",
+      "text": "We do not add additional costs for packaging and delivery to nearby estates (check your address in the delivery tab)"
+    },
+    "card2": {
+      "title": "LOYALTY PROGRAM",
+      "text": "Collect 5 stamps, you will get a 10.00 PLN discount! After entering the code, click 'add'. The minimum order value after a discount of PLN 30. The promotion ends: 04/30/2025!"
+    },
+    "card3": {
+      "title": "PIZZA SAUCES",
+      "text": "For each pizza, 30 cm and 42 cm, we add a set of sauces (garlic and tomato)."
+    }
+  },
+  "wine": "wine",
+  "olive-oil": "olive oil",
   "": "",
   "": "",
   "": "",

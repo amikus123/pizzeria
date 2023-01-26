@@ -6,6 +6,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import Hover from "../general/text/Hover";
 import clsx from "clsx";
 import { useScrollbarWidth } from "../../hooks/useScrollbarWidth";
+import useTranslation from "next-translate/useTranslation";
 
 const MobileMenu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] =
@@ -24,7 +25,7 @@ const MobileMenu = () => {
   useEffect(() => {
     setScrollbarWidth(width);
   }, [width]);
-
+  const { t } = useTranslation("common");
   return (
     <>
       <div
@@ -50,12 +51,14 @@ const MobileMenu = () => {
             e.stopPropagation();
           }}
         >
-          <div className="h-24 w-full bg-orange-700 pr-[15px]">
+          <div
+            className="h-24 w-full bg-orange-700"
+            style={{ right: `${scrollbarWidth}px)` }}
+          >
             <button>
               <VscChromeClose
-                className={clsx([
-                  `fixed top-8 right-[calc(16px+${scrollbarWidth}px)] z-50 h-6 w-6 cursor-pointer`,
-                ])}
+                className={clsx([`fixed top-8  z-50 h-6 w-6 cursor-pointer`])}
+                style={{ right: `calc(16px + ${scrollbarWidth}px)` }}
                 color="white"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -74,8 +77,13 @@ const MobileMenu = () => {
                       setIsMobileMenuOpen(false);
                     }}
                   >
-                    <Hover tag="nextLink" href={href} colorChange={false}>
-                      {text}
+                    <Hover
+                      tag="nextLink"
+                      className="capitalize"
+                      href={href}
+                      colorChange={false}
+                    >
+                      {t(`common:${text}`)}
                     </Hover>
                   </li>
                 );

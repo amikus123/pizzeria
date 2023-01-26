@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import React from "react";
 import { FaImage } from "react-icons/fa";
@@ -11,6 +12,7 @@ import Button from "../../../general/text/Button";
 const ImageGallery = () => {
   const imageGallery = useRecoilValue(imageGalleryAtom);
   const setImageGalleryIndex = useSetRecoilState(imageGalleryIndexAtom);
+  const { t } = useTranslation("landing");
 
   return (
     <div>
@@ -30,7 +32,7 @@ const ImageGallery = () => {
             >
               <Image src={src} fill className="object-fill" alt={alt} />
               <div className="group absolute top-0 bottom-0 left-0   right-0 flex cursor-pointer items-center justify-center   ">
-                <div className="absolute top-0 bottom-0 left-0 right-0 bg-orange-600 opacity-0 transition duration-300 hover:opacity-40 "></div>
+                <div className="absolute top-0 bottom-0 left-0 right-0 bg-orange-600 opacity-0 transition duration-300 group-hover:opacity-40 "></div>
                 <FaImage
                   className="z-10  h-10  w-10  opacity-0 transition duration-300 group-hover:opacity-100"
                   color="white"
@@ -47,7 +49,7 @@ const ImageGallery = () => {
           setImageGalleryIndex(0);
         }}
       >
-        SEE ALL
+        {t("common:buttons.seeMore")}
       </Button>
     </div>
   );

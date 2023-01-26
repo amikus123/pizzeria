@@ -5,7 +5,11 @@ import Button from "../text/Button";
 import Heading from "../text/Heading";
 import type { OfferCardData } from "../../pages/Landing/sections/LandingBestOffers";
 
-const Card = ({ imageAlt, title, imageUrl, text }: OfferCardData) => {
+interface CardProps extends OfferCardData {
+  title: string;
+  text: string;
+}
+const Card = ({ imageAlt, title, imageUrl, text }: CardProps) => {
   return (
     <Link href="/menu">
       <section className="relative flex h-[440px] w-80  flex-col items-center gap-4 border-2 p-4 pt-32 shadow transition hover:shadow-xl xl:w-96">

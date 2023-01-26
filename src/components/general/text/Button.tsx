@@ -20,7 +20,7 @@ const Button = ({
         <Link href={href}>
           <button
             className={clsx(
-              "flex w-fit  rounded border-2 border-orange-600 bg-orange-600 p-4 px-8 text-center text-xl text-white transition duration-300 hover:border-orange-700 hover:bg-orange-700",
+              "flex w-fit rounded border-2 border-orange-600 bg-orange-600 p-4 px-8 text-center text-xl uppercase text-white transition duration-300 hover:border-orange-700 hover:bg-orange-700",
               className,
               inverse &&
                 "bg-white text-orange-600  hover:bg-orange-600 hover:text-white"
@@ -33,7 +33,7 @@ const Button = ({
       ) : (
         <button
           className={clsx(
-            "flex w-fit  rounded border-2 border-orange-600 bg-orange-600 p-4 px-8 text-center text-xl text-white transition duration-300 hover:border-orange-700 hover:bg-orange-700",
+            "flex w-fit  rounded border-2 border-orange-600 bg-orange-600 p-4 px-8 text-center text-xl uppercase text-white transition duration-300 hover:border-orange-700 hover:bg-orange-700",
             className,
             inverse &&
               "bg-white text-orange-600  hover:bg-orange-600 hover:text-white"

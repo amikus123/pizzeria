@@ -13,7 +13,7 @@ const splitSlug = (arr: string[]): SlugData[] => {
       obj.push({ href: `${item}`, text: "Start" });
     } else {
       obj.push({
-        href: `${obj[index - 1]?.href as string}/${item}`,
+        href: `${obj[index - 1]?.href}/${item}`,
         text: capitalize(item),
       });
     }

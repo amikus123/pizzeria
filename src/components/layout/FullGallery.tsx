@@ -16,7 +16,7 @@ const FullGallery = () => {
   );
   const closeGallery = () => setImageGalleryIndex(-1);
   const modifyIndex = (add: boolean) => {
-    let newValue;
+    let newValue: number;
     if (add) {
       newValue =
         imageGalleryIndex + 1 >= imageGallery.length
@@ -70,8 +70,8 @@ const FullGallery = () => {
           <div className="relative  mx-auto flex aspect-video min-w-[200px]  flex-1 lg:max-w-[150vh]">
             {imageGalleryIndex >= 0 && (
               <Image
-                src={imageGallery[imageGalleryIndex]?.src as string}
-                alt={imageGallery[imageGalleryIndex]?.alt as string}
+                src={imageGallery[imageGalleryIndex]?.src}
+                alt={imageGallery[imageGalleryIndex]?.alt}
                 fill
                 className="select-none object-fill "
               />

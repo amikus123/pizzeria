@@ -25,13 +25,15 @@ const Cover = ({ alt, url, isLanding }: CoverProps) => {
         isLanding
           ? "h-[87vw] max-h-[800px] min-h-[600px]"
           : "h-[60vw] max-h-[400px] min-h-[400px] xl:max-h-[450px]",
+        isMobileMenuOpen && "pr-[15px]",
       ])}
+      style={{ width: isMobileMenuOpen && `calc(100% - ${scrollbarWidth}px)` }}
     >
       <Image
         src={url}
         className={clsx([
           " animate-scale-picture object-cover",
-          isMobileMenuOpen && `!w-[calc(100%-${scrollbarWidth}px)]`,
+          // isMobileMenuOpen && `!w-[calc(100%-${scrollbarWidth}px)]`,
         ])}
         fill
         alt={alt}

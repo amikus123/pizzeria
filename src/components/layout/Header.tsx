@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import React from "react";
 import { FaBars, FaPizzaSlice } from "react-icons/fa";
@@ -12,15 +13,18 @@ interface LinkData {
 }
 
 export const links: LinkData[] = [
-  { href: "/menu", text: "Menu" },
-  { href: "", text: "Offers" },
-  { href: "", text: "Delivery" },
-  { href: "", text: "Images" },
-  { href: "", text: "Contact" },
+  { href: "/menu", text: "menu" },
+  { href: "/offers", text: "offers" },
+  { href: "/delivery", text: "delivery" },
+  { href: "/gallery", text: "gallery" },
+  { href: "/contact", text: "contact" },
 ];
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] =
     useRecoilState(isMobileMenuOpenAtom);
+
+  const { t } = useTranslation("common");
+
   return (
     <header className="absolute z-10 flex w-full items-center justify-between px-4  py-4 md:py-8 lg:justify-around ">
       <Link href="/">
@@ -29,9 +33,12 @@ const Header = () => {
       <ul className="hidden  list-none gap-8 md:flex">
         {links.map(({ href, text }, index) => {
           return (
-            <li key={index} className="text-lg text-white md:text-xl">
+            <li
+              key={index}
+              className="text-lg capitalize text-white md:text-xl"
+            >
               <Hover tag="nextLink" href={href}>
-                {text}
+                {t(`common:${text}`)}
               </Hover>
             </li>
           );
@@ -54,7 +61,7 @@ const Header = () => {
       </div>
 
       <div className="hidden align-middle md:flex ">
-        <Button href="/order">Order now</Button>
+        <Button href="/order">{t("common:buttons.orderNow")}</Button>
       </div>
     </header>
   );

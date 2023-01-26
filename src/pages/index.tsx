@@ -9,13 +9,16 @@ import BestOffers from "../components/pages/Landing/sections/LandingBestOffers";
 import Hero from "../components/pages/Landing/sections/LandingHero";
 import SecondHero from "../components/pages/Landing/sections/LandingSecondHero";
 import Location from "../components/pages/Landing/sections/LandingLocation";
+import useTranslation from "next-translate/useTranslation";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <div>
         <Hero />
-        <Cover url="/pizza-bg.jpg" alt="Pizza" isLanding />
+        <Cover url="/pizza-bg.jpg" alt={t("common:pizza")} isLanding />
       </div>
       <div className="flex flex-col">
         <Location />

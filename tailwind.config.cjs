@@ -10,12 +10,12 @@ module.exports = {
       keyframes: {
         scale: {
           "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(1.25)" },
+          "100%": { transform: "scale(1.10)" },
         },
       },
     },
     animation: {
-      "scale-picture": "scale 10s linear",
+      "scale-picture": "scale 4s linear forwards ",
     },
   },
   plugins: [],

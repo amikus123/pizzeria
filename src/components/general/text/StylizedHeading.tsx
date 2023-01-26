@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React from "react";
-import { TagType } from "./Heading";
+import type { TagType } from "./Heading";
 
 interface StylizedHeadingProps
   extends React.ButtonHTMLAttributes<HTMLHeadingElement> {
