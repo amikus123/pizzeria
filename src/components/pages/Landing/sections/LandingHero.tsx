@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <section className="pointer-events-none absolute  z-10 w-full px-4 pt-56  text-white  ">
       <div className=" pointer-events-auto  flex w-full max-w-sm flex-col md:mx-auto md:max-w-sm">
-        <h1 className="flex flex-col justify-start  md:justify-center ">
+        <h1 className="flex  flex-col justify-start  md:justify-center ">
           <span className="pb-2 font-serif text-2xl text-orange-500 sm:text-3xl md:text-4xl">
             {t("landing:sections.hero.headingSubText")}
           </span>
-          <span className="max-w-xs text-3xl font-bold sm:text-5xl md:max-w-none  md:text-6xl">
+          <span className="text-shadow-orange-500 max-w-xs text-3xl font-bold sm:text-5xl md:max-w-none  md:text-6xl">
             {t("landing:sections.hero.headingText")}
           </span>
         </h1>

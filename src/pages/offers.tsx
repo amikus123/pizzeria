@@ -5,7 +5,7 @@ const GalleryPage = () => {
   return (
     <>
       <div>
-        <PageHeading />
+        <PageHeading>a</PageHeading>
         <Cover url="/pizza-menu.jpg" alt="Pizza" />
       </div>
       <div

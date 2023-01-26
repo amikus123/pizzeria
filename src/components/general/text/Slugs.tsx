@@ -27,12 +27,15 @@ const splitSlug = (arr: string[]): SlugData[] => {
 const Slugs = () => {
   const router = useRouter();
   const [slugData] = useState(splitSlug(router.pathname.split("/")));
+  console.log({ slugData });
   return (
     <ul className="flex gap-2 text-lg  lg:text-xl">
       {slugData.map(({ href, text }, index) => {
         return (
           <li key={index}>
-            <Hover href={href}>{text}</Hover>
+            <Hover tag="nextLink" href={href}>
+              {text}
+            </Hover>
             {index < slugData.length - 1 && (
               <span
                 className="ml-2

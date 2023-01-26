@@ -7,3 +7,9 @@
 }
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-shadow-orange-500 {
+    text-shadow: 0 0 15px rgb(234 88 12);
+  }
+}

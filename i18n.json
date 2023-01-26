@@ -2,8 +2,16 @@
   "locales": ["pl", "en"],
   "defaultLocale": "pl",
   "pages": {
-    "*": ["common", ""],
+    "*": ["common"],
     "/": ["landing"],
+    "/about-us": ["about-us"],
+    "/reservation": ["reservation"],
+    "/offers": ["offers"],
+    "/menu": ["menu"],
+    "/delivery": ["delivery"],
+    "/contact": ["contact"],
+    "/about": ["about"],
+    "/about": ["about"],
     "/about": ["about"]
   }
 }

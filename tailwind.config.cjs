@@ -18,5 +18,6 @@ module.exports = {
       "scale-picture": "scale 4s linear forwards ",
     },
   },
+
   plugins: [],
 };
